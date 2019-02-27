@@ -1,0 +1,613 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-02-13T08:53:28.013Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_10417245c8514e91b77016cdf65509ae",
+			"created": 1550025307463,
+			"description": "",
+			"modified": 1550025307463,
+			"name": "GRAPHENE API",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_20d2e1d181574095bd60492a6265438d",
+			"color": null,
+			"created": 1550025307492,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1550025307492,
+			"modified": 1550025307492,
+			"name": "New Environment",
+			"parentId": "wrk_10417245c8514e91b77016cdf65509ae",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_e3cd301059024c1dbc2e306b85d988d6",
+			"cookies": [
+				{
+					"creation": "2019-02-13T02:35:23.599Z",
+					"domain": "localhost",
+					"expires": "2020-02-12T08:53:03.000Z",
+					"hostOnly": true,
+					"id": "1510310667476924",
+					"key": "csrftoken",
+					"lastAccessed": "2019-02-13T08:53:03.955Z",
+					"maxAge": 31449600,
+					"path": "/",
+					"value": "v8hPf29JXhQNiHS63UOJjCBfLsvUKonJy0SgB5Y6IkEEid1j38WJdukFejA7DjoY"
+				}
+			],
+			"created": 1550025307494,
+			"modified": 1550047983955,
+			"name": "Default Jar",
+			"parentId": "wrk_10417245c8514e91b77016cdf65509ae",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"created": 1550025317514,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1549917405561.25,
+			"modified": 1550025317603,
+			"name": "GRAPHENE HCAREAPI",
+			"parentId": "wrk_10417245c8514e91b77016cdf65509ae",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_5ae863afd5f7489fbcd33f58b7a180d9",
+			"created": 1550025317516,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1549884437336.5,
+			"modified": 1550025367493,
+			"name": "RELAY SAMPLES",
+			"parentId": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_c440c2880e1c442ca97b79d7b1aba644",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation createsampletbl1($col1: String!, $col2: String) {\\n  createSampletbl1(col1: $col1, col2: $col2) {\\n    col1\\n    col2\\n  }\\n}\\n\",\"variables\":{\"col1\":\"SAMPLECOL1\",\"col2\":\"SAMPLECOL2\"},\"operationName\":\"createsampletbl1\"}"
+			},
+			"created": 1550025317518,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTQ5OTUzODA5LCJleHAiOjE1NDk5NTQxMDl9.aYn3DUlr18DVQGgVh0pHd8bJ7IEYi0nbMgbZIkojtws"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549950396073,
+			"method": "POST",
+			"modified": 1550047665129,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c08a91054d3640ccaa9b095307a120c3",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation getToken($username: String!, $password: String!) {\\n  tokenAuth(username: $username, password: $password) {\\n    token\\n  }\\n}\\n\",\"variables\":{\"username\":\"ryan\",\"password\":\"creepypasta\"},\"operationName\":\"getToken\"}"
+			},
+			"created": 1550025317522,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_6f2a4ddc513c45a58587ed1d117941f3",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549950429473,
+			"method": "POST",
+			"modified": 1550047563095,
+			"name": "getToken",
+			"parameters": [],
+			"parentId": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_a2dbb86ed4ee4b4f9f2a45689ffb919c",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"query sampleread{\\n  allSampletbl1{\\n    id\\n    col1\\n    col2\\n    createdby{\\n      username\\n    }\\n  }\\n}\",\"operationName\":\"sampleread\"}"
+			},
+			"created": 1550025317525,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTQ5OTUxNjg5LCJleHAiOjE1NDk5NTE5ODl9.K1HqwRxZAIDPSoPO-AioJ_JT2o1YOqNZtqcEM3GC6Qs"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549912705395,
+			"method": "POST",
+			"modified": 1550047670008,
+			"name": "READ - LIST ALL",
+			"parameters": [],
+			"parentId": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_e39f2dc609ea43b1be4447397c20ad4c",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation update($id: Int, $col1: String!, $col2: String) {\\n  updateSampletbl1(id: $id, col1: $col1, col2: $col2) {\\n    col1\\n    col2\\n  }\\n}\\n\",\"variables\":{\"id\":12,\"col1\":\"SAMPLEUPDATECOl1\",\"col2\":\"SAMPLEUPDATECOl2\"},\"operationName\":\"update\"}"
+			},
+			"created": 1550025317528,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTQ5OTUxNjg5LCJleHAiOjE1NDk5NTE5ODl9.K1HqwRxZAIDPSoPO-AioJ_JT2o1YOqNZtqcEM3GC6Qs"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549893860056,
+			"method": "POST",
+			"modified": 1550047974105,
+			"name": "Update",
+			"parameters": [],
+			"parentId": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b7171517723b4e4e82a546dd1d08f4d8",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation delete($id:Int){\\n  deleteSampletbl1(id: $id){\\n    id\\n  }\\n}\",\"variables\":{\"id\":14},\"operationName\":\"delete\"}"
+			},
+			"created": 1550025317535,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTQ5OTUxNjg5LCJleHAiOjE1NDk5NTE5ODl9.K1HqwRxZAIDPSoPO-AioJ_JT2o1YOqNZtqcEM3GC6Qs"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549884437386.5,
+			"method": "POST",
+			"modified": 1550047914103,
+			"name": "DELETE",
+			"parameters": [],
+			"parentId": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_98d3d3b69a584b79870eeb62f8889da6",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation validateToken($token: String!) {\\n  verifyToken(token: $token) {\\n    payload\\n  }\\n}\\n\",\"variables\":{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTUwMDQ3NDY4LCJleHAiOjE1NTAwNDc3Njh9.LY-_eaKk5zsP0OqTMc4e95oX2zo5FglID0XqGSkXFMY\"},\"operationName\":\"validateToken\"}"
+			},
+			"created": 1550025317544,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_6f2a4ddc513c45a58587ed1d117941f3",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549950412773,
+			"method": "POST",
+			"modified": 1550047571214,
+			"name": "validateToken",
+			"parameters": [],
+			"parentId": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_08f8baf6bb0b48f4adc7cc05f600cef0",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation refToken($token: String!) {\\n  refreshToken(token: $token) {\\n    payload\\n  }\\n}\\n\",\"variables\":{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTUwMDQ3NDY4LCJleHAiOjE1NTAwNDc3Njh9.LY-_eaKk5zsP0OqTMc4e95oX2zo5FglID0XqGSkXFMY\"},\"operationName\":\"refToken\"}"
+			},
+			"created": 1550025317550,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_6f2a4ddc513c45a58587ed1d117941f3",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549950404423,
+			"method": "POST",
+			"modified": 1550047584222,
+			"name": "refreshToken",
+			"parameters": [],
+			"parentId": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_2cee0a1921a94b5a926bc81dee6eeb0a",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"query sampleread($id:Int){\\n  sampletbl1(id:$id){\\n\\t\\tcol1\\n    col2\\n  }\\n  #ALIAS UNG GET2\\n  get2:sampletbl1(id:16){\\n\\t\\tcol1\\n    col2\\n  }\\n}\",\"variables\":{\"id\":14},\"operationName\":\"sampleread\"}"
+			},
+			"created": 1550025317568,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTQ5OTUxNjg5LCJleHAiOjE1NDk5NTE5ODl9.K1HqwRxZAIDPSoPO-AioJ_JT2o1YOqNZtqcEM3GC6Qs"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549896215723.375,
+			"method": "POST",
+			"modified": 1550047895075,
+			"name": "READ - Get",
+			"parameters": [],
+			"parentId": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_4f3dccfc95d44ef1a60f2b608404b815",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"query sampleread($first: Int!, $skip: Int!) {\\n  paginateSampletbl1(first: $first, skip: $skip) {\\n    id\\n    col1\\n    col2\\n    createdby {\\n      username\\n    }\\n  }\\n}\\n\",\"variables\":{\"first\":10,\"skip\":10},\"operationName\":\"sampleread\"}"
+			},
+			"created": 1550025317575,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTQ5OTUxNjg5LCJleHAiOjE1NDk5NTE5ODl9.K1HqwRxZAIDPSoPO-AioJ_JT2o1YOqNZtqcEM3GC6Qs"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549907994060.25,
+			"method": "POST",
+			"modified": 1550047740274,
+			"name": "READ - LIST ALL (Paginated)",
+			"parameters": [],
+			"parentId": "fld_1e05ad1983044530a2ebeb517e88162d",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_76e6059b23714f6384577e3b4eef3d1c",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"query sampleread{\\n  relaySampletbl1s{\\n    edges{\\n      node{\\n        id\\n        col1\\n      }\\n    }\\n  }\\n}\",\"operationName\":\"sampleread\"}"
+			},
+			"created": 1550025317581,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTQ5OTUxNjg5LCJleHAiOjE1NDk5NTE5ODl9.K1HqwRxZAIDPSoPO-AioJ_JT2o1YOqNZtqcEM3GC6Qs"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549884437361.5,
+			"method": "POST",
+			"modified": 1550047976355,
+			"name": "READ - LIST ALL",
+			"parameters": [],
+			"parentId": "fld_5ae863afd5f7489fbcd33f58b7a180d9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_d67c94f6bfc4499e9b7d33b7070487c1",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"query sampleread{\\n  relaySampletbl1s(first:10,after:\\\"YXJyYXljb25uZWN0aW9uOjA=\\\"){\\n    edges{\\n      node{\\n        id\\n        col1\\n        createdby{\\n          username\\n        }\\n      }\\n    }\\n    pageInfo{\\n      startCursor\\n      endCursor\\n      hasNextPage\\n      hasPreviousPage\\n    }\\n  }\\n}\",\"operationName\":\"sampleread\"}"
+			},
+			"created": 1550025317589,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTQ5OTUxNjg5LCJleHAiOjE1NDk5NTE5ODl9.K1HqwRxZAIDPSoPO-AioJ_JT2o1YOqNZtqcEM3GC6Qs"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549884437311.5,
+			"method": "POST",
+			"modified": 1550047979388,
+			"name": "READ - LIST ALL (Paginated)",
+			"parameters": [],
+			"parentId": "fld_5ae863afd5f7489fbcd33f58b7a180d9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_702b5b5f952e4227a2424b8ec88390ba",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"query sampleread{\\n  relaySampletbl1(id:\\\"U2FtcGxldGJsMU5vZGU6MTU=\\\"){\\n    id  \\n    col1\\n    col2\\n    createdby{\\n      username\\n      email\\n    }\\n  }\\n}\",\"operationName\":\"sampleread\"}"
+			},
+			"created": 1550025429207,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTQ5OTUxNjg5LCJleHAiOjE1NDk5NTE5ODl9.K1HqwRxZAIDPSoPO-AioJ_JT2o1YOqNZtqcEM3GC6Qs"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549884437336.5,
+			"method": "POST",
+			"modified": 1550047976946,
+			"name": "READ - Get 1",
+			"parameters": [],
+			"parentId": "fld_5ae863afd5f7489fbcd33f58b7a180d9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_5e97b49460da4099af79a1ebc6cc58fc",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation samplecreate{\\n  relayCreateSampletbl1(sammpletbl1Data:{col1:\\\"colxxxx1\\\",col2:\\\"collxxx222\\\"}){\\n    sammpletbl1{\\n      id\\n      col1\\n      col2\\n    }\\n  }\\n}\",\"operationName\":\"samplecreate\"}"
+			},
+			"created": 1550037659857,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTUwMDM4NTYyLCJleHAiOjE1NTAwMzg4NjJ9.Fwu54qw8RFXF0lR_BBoD_g2abe71zBhHDjdf40v-lO4"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549884437261.5,
+			"method": "POST",
+			"modified": 1550047981097,
+			"name": "CREATE",
+			"parameters": [],
+			"parentId": "fld_5ae863afd5f7489fbcd33f58b7a180d9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_89d2bf87560a4c99b8ef1563007822d5",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation sampleupdate{\\n  relayUpdateSampletbl1(id:\\\"U2FtcGxldGJsMU5vZGU6MjY=\\\",sammpletbl1Data\\n    :{,col1:\\\"VVasdasdasdasdasdVVV\\\",col2:\\\"XXXxxasdasdasdasdXX\\\"}){\\n    sampletbl1{\\n      id\\n      col1\\n      col2\\n    }\\n  }\\n}\",\"operationName\":\"sampleupdate\"}"
+			},
+			"created": 1550042746170,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTUwMDM4NTYyLCJleHAiOjE1NTAwMzg4NjJ9.Fwu54qw8RFXF0lR_BBoD_g2abe71zBhHDjdf40v-lO4"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549879725989.25,
+			"method": "POST",
+			"modified": 1550047981860,
+			"name": "UPDATE",
+			"parameters": [],
+			"parentId": "fld_5ae863afd5f7489fbcd33f58b7a180d9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_738f1135b543405f80bf6b930cbbbdac",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation sampledelete{\\n  relayDeleteSampletbl1(id:\\\"U2FtcGxldGJsMU5vZGU6MjY=\\\"){\\n    sampletbl1{\\n      col1\\n      col2\\n    }\\n  }\\n}\",\"operationName\":\"sampledelete\"}"
+			},
+			"created": 1550046888687,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c43d802d662c4338ad844419bb49cece",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_e5b8a08051b54f9dbb9f1f2a5ab05981",
+					"name": "Authorization",
+					"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJ5YW4iLCJvcmlnSWF0IjoxNTUwMDM4NTYyLCJleHAiOjE1NTAwMzg4NjJ9.Fwu54qw8RFXF0lR_BBoD_g2abe71zBhHDjdf40v-lO4"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1549877370353.125,
+			"method": "POST",
+			"modified": 1550047983644,
+			"name": "DELETE",
+			"parameters": [],
+			"parentId": "fld_5ae863afd5f7489fbcd33f58b7a180d9",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8000/api/",
+			"_type": "request"
+		}
+	]
+}
