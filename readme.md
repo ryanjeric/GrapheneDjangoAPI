@@ -11,14 +11,7 @@
 
 
 
-## SRCS
 
-
->Django + Graphene
-https://www.howtographql.com/graphql-python/0-introduction/
-
->Django Tutorials
-https://www.youtube.com/watch?v=UmljXZIypDc , https://www.youtube.com/watch?v=qgGIqRFvFFk&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK
 
 
 
@@ -66,9 +59,14 @@ graphql-docs-gen http://localhost:8000/api/ documentation.html
 ```
 
 
-##### README GENERATED USING 
- - https://michaeldyrynda.github.io/readme-generator/
- - https://dillinger.io/
 
 
 
+## SRCS
+
+
+>Django + Graphene
+https://www.howtographql.com/graphql-python/0-introduction/
+
+>Django Tutorials
+https://www.youtube.com/watch?v=UmljXZIypDc , https://www.youtube.com/watch?v=qgGIqRFvFFk&list=PL6gx4Cwl9DGBlmzzFcLgDhKTTfNLfX1IK
