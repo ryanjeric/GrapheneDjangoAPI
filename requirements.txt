@@ -1,13 +1,12 @@
 aniso8601==3.0.2
-Django==2.1.7
-django-filter==2.1.0
+Django==1.11.27
+django-filter==1.1
 django-cors-headers==2.4.0
 django-graphql-jwt==0.2.0
 graphene==2.1.3
 graphene-django==2.2.0
 graphql-core==2.1
 graphql-relay==0.4.5
-mysqlclient==1.3.14
 promise==2.2.1
 PyJWT==1.7.1
 pytz==2018.9
