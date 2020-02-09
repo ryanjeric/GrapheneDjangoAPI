@@ -62,7 +62,7 @@ graphql-docs-gen http://localhost:8000/api/ documentation.html
 
 
 
-## SRCS
+## SRC LINKS
 
 
 >Django + Graphene
